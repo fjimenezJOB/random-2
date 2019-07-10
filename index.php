@@ -15,19 +15,34 @@ $personas = [
     'Alexis',
     'David',
     'Jordi',
-    'Luis',
+    'Luis el carapolla',
     'Toni'
 ];
 
-$personaUno = array_rand($personas, 2);
-$personaDos = array_rand($personas, 2);
-
-echo '<h1 style="text-align:center;">'. $personas[$personaUno[0]]. ' · ' .$personas[$personaDos[0]] .'</h1>';
-
-if ( $nombre1 = array_search ($personas[$personaUno[0]], $personas ) ) {
-    unset($personas[$nombre1]);
+function pintarListaRandom($arr) {
+    shuffle($arr);
+    foreach($arr as $val) {
+        echo '<li>'.$val.'</li>';
+    }
 }
-if ( $nombre2 = array_search ($personas[$personaDos[0]], $personas ) ) {
-    unset($personas[$nombre2]);
-}
-// echo($random = rand(0,15) . '. ');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>El Randomizer 5000</h1>
+        <ul>
+            <?php 
+            pintarListaRandom($personas);
+            ?>
+        </ul>
+    </div>
+</body>
+</html>

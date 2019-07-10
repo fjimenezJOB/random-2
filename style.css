@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #333;
+}
+h1 {
+  height: 180px;
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 700px;
+  margin: auto;
+}
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container ul li {
+  flex-basis: 45%;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
