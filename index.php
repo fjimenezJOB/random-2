@@ -1,5 +1,5 @@
 <?php
-
+// Quiero pasar el array a la base de datos
 $personas = [
     'Julia',
     'Jorge',
